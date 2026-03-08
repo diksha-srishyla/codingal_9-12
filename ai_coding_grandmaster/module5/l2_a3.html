@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+
+<h2> Javascript Class Static Methods </h2>
+<p> A static method is created with the "Static" keyword and you can only call the method on the class itself. </p>
+
+<p id="hello"></p>
+<p id="hi"></p>
+<p id="Welcome"></p>
+
+<script>
+
+class Student{
+constructor(name) {
+    this.studentName = name;
+}
+static hello() {//static method
+    return "Hello!!";
+}
+
+static Welcome(x){
+    return "Welcome " + x.studentName;
+}
+
+hi(){
+    return "Hi " + this.studentName; 
+}
+}
+
+myName = new Student("Carol ");
+//Call 'hello()' on the class student and NOT on the 'myName' object because 'hello()' is a static method and cannot access the class object
+
+document.getElementById("hello").innerHTML = Student.hello();
+
+//Call 'hi()'on the myName object
+
+document.getElementById("hi").innerHTML = myName.hi();
+
+//Call 'welcome()' can access the object since the parameter is passed
+
+document.getElementById("Welcome").innerHTML = Student.Welcome(myName);
+
+</script>
+
+</html>
