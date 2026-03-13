@@ -1,0 +1,29 @@
+/*Footer background like the image */
+
+footer{
+    background: #2b2b2b;
+    width: 100%;
+}
+
+/*Center text+spacing */
+footer .container{
+    padding: 22px 0 !important;
+}
+
+/*Text styling */
+footer h5{
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #8b8b8b;
+}
+
+/*Highlighted link text */
+footer a{
+    color: #f2a900 !important;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
